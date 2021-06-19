@@ -39,7 +39,7 @@ h1, .lead, blockquote {
 }
 
 h1 {
-	font-size: var(--ff-xl);
+	font-size: var(--fs-xl);
 	line-height: 1;
 	text-transform: uppercase;
 	font-weight: 900;
