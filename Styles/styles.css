@@ -1,0 +1,44 @@
+:root { 
+	--ff-body: 'Heebo', sans-serif;
+	--ff-heading: 'Oswald', sans-serif;
+	
+	--clr-primary-400: hsl(60 100% 50%);
+	--clr-neutral-900: hsl(0 0% 0%);
+	--clr-neutral-100: hsl(0 0% 100%);
+	
+	--fs-xl: clamp(3rem, 1rem + 10vw, 7rem);
+	--fs-600: 2rem;
+	--fs-500: 1.5rem;
+	--fs-400: 1.125rem;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+
+body, h1, h2, h3, blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+body {
+	font-family: var(--ff-body);
+	font-size: var(--ff-400);
+}
+
+h1, .lead, blockquote {
+	font-family: var(--ff-heading);
+}
+
+h1 {
+	font-size: var(--ff-xl);
+	
+}
