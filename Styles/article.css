@@ -2,7 +2,7 @@
 	--ff-body: 'Heebo', sans-serif;
 	--ff-heading: 'Oswald', sans-serif;
 	
-	--clr-primary-400: hsl(60 100% 50%);
+	--clr-primary-400: hsl(177, 100%, 39%);
 	--clr-neutral-900: hsl(0 0% 0%);
 	--clr-neutral-100: hsl(0 0% 100%);
 	
@@ -21,6 +21,12 @@
 body, h1, h2, h3, p, blockquote {
 	margin: 0;
 	padding: 0;
+	background: var(--clr-neutral-900);
+	color: var(--clr-neutral-100);
+}
+
+a, blockquote, .point { 
+	color: var(--clr-primary-400);
 }
 
 img {
@@ -88,12 +94,12 @@ article > *:not(img) {
 	float: left;
 	font-weight: 750;
 	padding: 0.05em;
-	border: 2px solid;
 	background-color: var(--clr-primary-400);
 	margin-right: 0.05em;
 }
 
-.article-body > p:first-child::first-line {
+.article-body > p:first-child::first-line,
+.point {
 	text-transform: uppercase;
 	font-weight: 750;
 }
