@@ -85,7 +85,8 @@ article > *:not(img) {
 }
 
 .article-body > p:first-child::first-letter {
-	
+	font-size: 4em;
+	float: left;
 }
 
 @media (min-width: 50em) {
