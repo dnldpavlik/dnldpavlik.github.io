@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.gstatic.com"> 
+		<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Oswald:wght@300..700&display=swap" rel="stylesheet">
+		<link href="../Styles/article.css" rel="stylesheet">
+		<title>Don Pavlik - Blog - Automation, AI, and Unit Tests</title>
+	</head>
+    <body><article class="flow">
+			<img src="../Images/Automation-Testing-Tools.jpg" alt="Merman" class="article-main-image" />
+			<h1>Automation, AI and Unit Tests</h1>
+			<p class="lead">Tools that help you get back time.</p>
+			
+			<div class="article-body flow">
+				<p>
+                    On Simple Programmers Blog I found the article <a href="https://simpleprogrammer.com/ai-become-better-programmer/">How To Use Automation and AI To Become a Better Programmer in 2021</a>that tries to remove the fear of automation and AI as tools. This article is has a positive spin on how a developer should view AI and automation for development. I am all for tools that help me get to my final result faster and remove the mundane out of my day-to-day coding tasks, but there are a couple of things in this article that makes me sad.
+				</p>
+				<p>
+					1. Unit tests are not the best use of time.
+				</p>
+                <blockquote>For example, ask any programmer, and they would agree that writing unit tests for their code may not be the best use of their time.</blockquote>
+				<p>
+					While I could go on an emotional rant on why this is a flawed approach to viewing unit tests, I once had this mindset. But as I grew in my development career, I learned that my time is far more valuable to me, and unit tests are a tool that helps me get more of it back, not take it away.
+				</p>
+                <p>
+                    Here are few ways that unit tests give you back time:
+                    <ul>
+                        <li>They help you isolate where the code broke due to other code changes.</li>
+                        <li>They describe how you expect the code to work.</li>
+                        <li>They stop a build/deployment when a test fails in a deployment pipeline.</li>
+                        <li>Unit tests help break up a complex problem into smaller bites allowing you to tackle a problem bit by bit.</li>
+                    </ul>
+                </p>
+                <p>
+                    These few show how this article focuses on using tools (including AI as one of those tools) to help help you get your development done, help you get more done, and free up your time.
+                </p>
+                <p>
+                    Some of the tools listed I was not aware of and will look into when I make time to evaluate them. For example, <a href="https://visualstudio.microsoft.com/services/intellicode/">IntelliCode</a> is a tool that I had used off and on; most of the time, I forget that I have it even installed as it does a similar job as other development tools I use; one of these tools is Tabnine. 
+                </p>
+				<p>
+					I use <a href="https://www.tabnine.com/">Tabnine</a> in <a href="https://code.visualstudio.com/">VSCode</a>, and it has helped me with code completion in a way that I never thought a tool could. When writing code, it shows suggestions for variable names, one thing that can take me out of the flow and whole strings of code to do what I am intending. Code suggestion tools will replace any developer, as they can only aid in what it sees being done based on the extensive library of code it has analyzed. (Which makes me think about how many times we have the same application written out there, and yet we do not use that one and enhance it but instead build another iteration.) 
+				</p>
+				<p>
+				    2. AI can do testing better
+				</p>
+                <blockquote>Such tools can be much more accurate and quicker in finding software bugs in applications and making timely amendments.</blockquote>
+                <p>
+                    Having been in a team with at least one dedicated tester gives me a mixed reaction on this. From a developer standpoint, I wouldn't say I like going back to fix bugs in my code, but also, I'm not too fond of the fact that I missed these bugs. One such case is spelling; I would love a spell checker in my code environment (I had a tool that did that but no longer remember what it is.) As humorous as finding a spelling error is, most testing tools will not recognize a spelling error as long as it checks out with the previous state it passes.  
+                </p>
+                <p>
+                    So a good tool can help find some of the typical types of bugs that could occur, but I have seen nearly all of these tools fail before a sound test engineer for a couple of reasons:
+                    <ol>
+                        <li>Test tools do not know what the software does; it just checks for defined patterns. A test engineer can test the application in ways it was not designed for and find a hidden bug that could be used against it once deployed.</li>
+                        <li>Test engineers find spelling mistakes, and when your application is multilingual, they can read the text to make sure it is not confusing to those who use it. </li>
+                        <li>They can create tests for found bugs and add them to the build/deployment pipeline to stop known errors from getting to production.</li>
+                    </ol>
+                </p>
+                <p>
+                    3. The Gap Between Requirements and <a href="https://www.tutorialspoint.com/sdlc/sdlc_overview.htm">SDLC</a>
+                </p>
+                <blockquote>Misalignment between business requirements and programming can turn out to be a huge loss for businesses.</blockquote>
+                <p>
+                    This one hurts me every day, as this gap seems to be something that people do not want to fix because it is too hard. It should never be out of the <a href="https://www.tutorialspoint.com/sdlc/sdlc_overview.htm">SDLC</a> and should be a tool that can generate functional testing that verifies intent. <a href="https://cucumber.io/">Cucumber</a> is striving to do this with its <a href="https://en.wikipedia.org/wiki/Behavior-driven_development">BDD</a> approach in its latest iteration. Still, the biggest hurdle tends to be the learning curve to have the tests that get written to support the documentation can be either too vague or too tightly coupled. 
+                </p>
+                <p>
+                    I long for a day when this is part of the <a href="https://www.tutorialspoint.com/sdlc/sdlc_overview.htm">SDLC</a>, and an average person with little technical training can write what they want their application to do, which helps produce a skeleton of the solution that developers use. Testers can validate your application still works outside of its designed intent.
+                </p>
+                <p>
+                    4. Security 
+                </p>
+                <blockquote>As a programmer, you know the importance of security in software development. While picking an AI tool, ensure that it offers the highest level of security so that you can be at peace with the tool accessing your codebase and database.</blockquote>
+                <p>
+                    Although this is good, it is severely lacking. Security tools need to be secure in your development lifecycle, but they also must educate everyone on all the issues found. Then these found issues need to be tests that fail until fixed; otherwise, they will make it to production. The company you work for may end up hurting based on the malicious intent of some security vulnerability expert.
+                </p>
+                <p>
+                    Overall this article has a great message, embrace AI and tools to get your time back to solve more challenging problems and spend time with friends and family. And remember a tool does nothing without someone using it.
+                </p>
+			</div>
+        </article>
+    </body>
+</html>
