@@ -19,7 +19,7 @@
 }
 
 
-body, h1, h2, h3, blockquote {
+body, h1, h2, h3, p, blockquote {
 	margin: 0;
 	padding: 0;
 }
@@ -29,18 +29,77 @@ img {
 	max-width: 100%;
 }
 
+.flow > * + * {
+	margin-top: var(--flow-spacer, 1em);
+}
+
+.lead {
+	font-size: var(--fs-500);
+	max-width: 40ch;
+}
+
 body {
 	font-family: var(--ff-body);
 	font-size: var(--ff-400);
+	line-height: 1.6;
 }
 
-h1, .lead, blockquote {
+h1, blockquote {
 	font-family: var(--ff-heading);
+	font-weight: 900;
 }
 
 h1 {
 	font-size: var(--fs-xl);
 	line-height: 1;
 	text-transform: uppercase;
-	font-weight: 900;
+}
+
+blockquote {
+	font-size: var(--fs-600);
+	line-height: 1.2;
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+blockquote::before {
+	content: open-quote;
+}
+
+blockquote::after {
+	content: close-quote;
+}
+
+article { 
+	display: grid;
+}
+
+article > *:not(img) {
+	padding: 0 2rem;
+}
+
+.article-body {
+	columns: 2 30ch;
+	gap: 4rem;
+	max-width: 100ch;
+}
+
+.article-body > p:first-child::first-letter {
+	
+}
+
+@media (min-width: 50em) {
+	article {
+		grid-template-columns: min(40%, 40rem) 1fr;
+	}
+	
+	article > img {
+		grid-row: 1 / 4;
+		height: 100%;
+		object-fit: cover;
+	}
+	
+	article > *:not(img) {
+		grid-column: 2 / -1;
+	}
 }
