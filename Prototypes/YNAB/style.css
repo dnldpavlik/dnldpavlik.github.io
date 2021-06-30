@@ -99,6 +99,16 @@ body {
     line-height: 1.1;
 }
 
+.budget-summary {
+    text-transform: uppercase;
+
+}
+
+.amount {
+    float: right;
+}
+
+
 .content {
     background: var(--clr-primary-900);
     flex: 2;
